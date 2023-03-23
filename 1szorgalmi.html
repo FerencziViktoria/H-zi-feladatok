@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>1. szorgalmi feladat 2023.01.14</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        /*1. Magatartás jegy szöveges értékelés*/
+        let Magjegy = Number(prompt("Add meg a jegyet"));
+        if (Magjegy == 5) {
+            document.write("Példás");
+        }
+        else if (Magjegy == 4) {
+            document.write("Jó");
+        }
+        else if (Magjegy == 3) {
+            document.write("Változó");
+        }
+        else if (Magjegy == 2) {
+            document.write("Rossz");
+        }
+        else {
+            document.write("Nem értékelhető jegy");
+        }
+
+        /*2. Érdemjegy szöveges értékelés*/
+        let jegy = Number(prompt("Add meg az érdemjegyet"));
+        if (jegy == 5) {
+            document.write("Jeles");
+        }
+        else if (jegy == 4) {
+            document.write("Jó");
+        }
+        else if (jegy == 3) {
+            document.write("Közepes");
+        }
+        else if (jegy == 2) {
+            document.write("Elégséges");
+        }
+        else if (jegy == 1) {
+            document.write("Elégtelen");
+        }
+        else {
+            document.write("Nem értékelhető jegy");
+        }
+
+        /*Másodfokú egyenlet a folyamatárbra alapján*/
+
+        let a = prompt("Add meg a négyzetes tag értékét");
+        let b = prompt("Add meg az X-es tag értékét");
+        let c = prompt("Add meg az egész szám értékét");
+
+        if (a == 0) {
+            document.write("Nem másodfokú egyenlet");
+        }
+        else {
+            let d = (b * b) - (4 * a * c);
+            if (d < 0) {
+                document.write("Nincs megoldása");
+            }
+            else if (d == 0) {
+                document.write("Egy megoldása van");
+                let x1 = -b / (2 * a);
+                document.write("<br>Az x1 értéke: " + x1);
+            }
+            else {
+                document.write("Két megoldása van");
+                let x1 = (-b + Math.sqrt(d)) / (2 * a);
+                let x2 = (-b - Math.sqrt(d)) / (2 * a);
+                document.write("<br>x1 értéke:" + x1);
+                document.write("<br>x2 értéke:" + x2);
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
